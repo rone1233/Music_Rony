@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url=f"https://t.me/vrrrrvr"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
                 InlineKeyboardButton(
-                    "مطور السورس", url=f"https://t.me/GGG66"
+                    "‹ مطور السوࢪس ›", url=f"https://t.me/GGG66"
                 ),
             ]
         ]
@@ -129,7 +129,7 @@ async def src(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url=f"https://t.me/kafren1"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
                 InlineKeyboardButton(
                     "‹ مطور السورس ›", url=f"https://t.me/GGG66"
                 ),
@@ -137,7 +137,7 @@ async def src(client: Client, message: Message):
         ]
     )
 
-    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس سوࢪس اެيفان\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
+    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس اެيفان\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
