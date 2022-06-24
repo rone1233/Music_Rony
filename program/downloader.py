@@ -51,21 +51,21 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ لَمَ أّجِدِ شٍيِّئأّ𖤫.\n\nأّعٌطّنِيِّ أّ سمَ أّلَمَغٌنِيِّ ګأّمَلَ.")
+        m.edit("᥀︙لم أجد شيئًا \n\n᥀︙الرجاء اعطائي اسم الاغنيه والفنان")
         print(str(e))
         return
-    m.edit("📥 تّحٌمَيِّلَ أّلَمَلَفِّ𖤕...")
+    m.edit("᥀︙جار تحميل ما طلبته")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**🎧 تم التحميل بواسطة @{bn}**"
+        rep = f"**᥀︙تم التحميل والرفع بواسطة @{bn}**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 تّحٌمَيِّلَ أّلَمَلَفِّ𖤕...")
+        m.edit("᥀︙جار تحميل ما طلبته")
         message.reply_audio(
             audio_file,
             caption=rep,
@@ -114,14 +114,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **تّحٌمَيِّلَ أّلَفِّيِّدِيِّوِ𖠀...**")
+        msg = await message.reply("᥀︙جار تحميل الفيديو")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
         return await msg.edit(f"🚫 **error:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **تّحٌمَيِّلَ أّلَفِّيِّدِيِّوِ𖠀...**")
+    await msg.edit("᥀︙جار التحميل")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
@@ -149,4 +149,4 @@ async def lyrics(_, message):
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("❌ **لَمَ يِّتّمَ أّلَعٌثّوِڒٍ عٌلَىّ نِتّأّئجِ ګلَمَأّتّ غٌنِأّئيِّ ةّ¤.**\n\n» **يِّڒٍجِىّ إعٌطّأّء أّ سمَ أغٌنِيِّ ةّ صٌأّلَحٌ.**")
+        await rep.edit("᥀︙اكتمل البحث لم أجد شيئًا**\n\n» **يُرجى اعطائي معلومات صحيحه**")
