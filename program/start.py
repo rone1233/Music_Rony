@@ -48,7 +48,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["/start", f"/start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["///start", f"//start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -74,7 +74,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/kafren1"
+                        "‹ قناة التحديثات ›", url=f"https://t.me/DJJJJJe"
                     ),
                     InlineKeyboardButton(
                         "‹ قناة البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"
@@ -82,7 +82,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ قناة اشعار حب وغزل ❤️🥺 ›", url="https://t.me/kafren1"
+                        "‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url="https://t.me/vrrrrvr"
                     )
                 ],
             ]
@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ سوࢪس ڪافࢪين ›", url=f"https://t.me/kafren1"),
+                InlineKeyboardButton("‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url=f"https://t.me/vrrrrvr"),
                 InlineKeyboardButton(
-                    "مطور السورس", url=f"https://t.me/taho11"
+                    "مطور السورس", url=f"https://t.me/GGG66"
                 ),
             ]
         ]
@@ -129,9 +129,9 @@ async def src(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ سوࢪس ڪافࢪين ›", url=f"https://t.me/kafren1"),
+                InlineKeyboardButton("‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url=f"https://t.me/kafren1"),
                 InlineKeyboardButton(
-                    "‹ مطور السورس ›", url=f"https://t.me/taho11"
+                    "‹ مطور السورس ›", url=f"https://t.me/GGG66"
                 ),
             ]
         ]
