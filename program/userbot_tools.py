@@ -23,7 +23,7 @@ async def join_chat(c: Client, m: Message):
             (await user.get_me()).id,
             can_manage_voice_chats=True
         )
-        return await user.send_message(chat_id, "✅ أّنِضّمَ حٌسأّبِ أّلَمَسأّعٌدِ إلَىّ أّلَدِڒٍدِشٍةّ")
+        return await user.send_message(chat_id, "᥀︙تم انضمام الحساب المساعد بنجاح")
     except UserAlreadyParticipant:
         admin = await m.chat.get_member((await user.get_me()).id)
         if not admin.can_manage_voice_chats:
@@ -31,8 +31,8 @@ async def join_chat(c: Client, m: Message):
                 (await user.get_me()).id,
                 can_manage_voice_chats=True
             )
-            return await user.send_message(chat_id, "✅ حٌسأّبِ أّلَمَسأّعٌدِ بِلَفِّعٌلَ مَوِجِوِدِ")
-        return await user.send_message(chat_id, "✅ لَتّلَحٌ يِّأّ خَڒٍأّأّ مَوِجِوِدِ أّفِّهِمَ")
+            return await user.send_message(chat_id, "᥀︙حساب المساعد موجود بالفعل")
+        return await user.send_message(chat_id, "᥀︙حبيبي دكلك الحساب المساعد موجود ليش تلح")
 
 
 @Client.on_message(command(["غادر",
@@ -45,12 +45,12 @@ async def leave_chat(_, m: Message):
         await user.leave_chat(chat_id)
         return await _.send_message(
             chat_id,
-            "✅ غادر المجموعة بايي بايي ",
+            "᥀︙تم المغادرة بنجاح",
         )
     except UserNotParticipant:
         return await _.send_message(
             chat_id,
-            "❌ غادر الدردشة",
+            "᥀︙غادر المجموعة",
         )
 
 
