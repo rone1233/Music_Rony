@@ -42,7 +42,7 @@ async def ytdl(format: str, link: str):
 @Client.on_message(command(["تشغيل", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     do = requests.get(
-        f"https://api.telegram.org/bot2075679625:AAHL1Qm5E_tvpu9MkArv6dWrX-WU45iDbyE/getChatMember?chat_id=@vrrrrvr&user_id={message.from_user.id}").text
+        f"https://api.telegram.org/bot.php/getChatMember?chat_id=@vrrrrvr&user_id={message.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
         keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/vrrrrvr')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
