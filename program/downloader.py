@@ -38,7 +38,7 @@ ydl_opts = {
 @Client.on_message(command(["تحميل", f"song@{bn}"]) & ~filters.edited)
 def song(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("🔎 finding song...")
+    m = message.reply("᥀︙ جار التحميل الرجاء الانتظار...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -76,7 +76,7 @@ def song(_, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌خَطّأ ، أّنِتّظّڒٍ حٌتّىّ يِّصٌلَحٌ مَأّلَګ أّلَبِوِتّ")
+        m.edit("حدث خطأ ما الرجاء اعلام المطور به حتى يصلحه [- 𝖸𝗎𝖮𝗌𝗌ᥱ𝖥 .](t.me/vrrrrvr)")
         print(e)
 
     try:
@@ -142,7 +142,7 @@ async def lyrics(_, message):
             await message.reply_text("» **give a lyric name too.**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **البحث عن كلمات...**")
+        rep = await message.reply_text("᥀︙ **البحث عن كلمات...**")
         resp = requests.get(
             f"https://api-tede.herokuapp.com/api/lirik?l={query}"
         ).json()
