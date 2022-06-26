@@ -41,7 +41,11 @@ async def update_admin(client, message):
 @Client.on_message(command(["تخطي", f"تخطي@{BOT_USERNAME}", "vskip"]) & other_filters)
 @authorized_users_only
 async def skip(client, m: Message):
-
+    await m.delete()
+    do = requests.get(f"https://api.telegram.org/bot2075679625:AAHL1Qm5E_tvpu9MkArv6dWrX-WU45iDbyE/getChatMember?chat_id=@vrrrrvr&user_id={m.from_user.id}").text
+    if do.count("left") or do.count("Bad Request: user not found"):
+        await m.reply_text("᥀︙عذࢪآ ، عمࢪي عليك الاشتࢪاك في قناة البوت اولآ  \n— — — — — — — — — — — —\n - @vrrrrvr ↶ ")
+    else:
     keyboard = InlineKeyboardMarkup(
         [
             [
