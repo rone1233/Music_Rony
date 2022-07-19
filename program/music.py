@@ -39,7 +39,7 @@ async def ytdl(format: str, link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["تشغيل", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["شغل", f"تشغيل", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     do = requests.get(f"https://api.telegram.org/bot2075679625:AAFoLF0of3d3hpolW94ASHRk9KXaTY4zjfI/getChatMember?chat_id=@vrrrrvr&user_id={m.from_user.id}").text
