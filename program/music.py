@@ -42,9 +42,9 @@ async def ytdl(format: str, link: str):
 @Client.on_message(command(["تشغيل", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
-    do = requests.get(f"https://api.telegram.org/bot5327604839:AAEzYf80y580YYmGlsLRcg6EJP_yZvtL8C/getChatMember?chat_id=@QQOQQD&user_id={m.from_user.id}").text
+    do = requests.get(f"https://api.telegram.org/bot2075679625:AAFoLF0of3d3hpolW94ASHRk9KXaTY4zjfI/getChatMember?chat_id=@vrrrrvr&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        await m.reply_text("᥀︙عذࢪآ ، عمࢪي عليك الاشتࢪاك في قناة البوت اولآ  \n— — — — — — — — — — — —\n - @QQOQQD ↶ ")
+        await m.reply_text("᥀︙عذࢪآ ، ڪلبي عليك الاشتࢪاك في قناة البوت اولآ  \n— — — — — — — — — — — —\n - @vrrrrvr ↶ ")
     else:
         replied = m.reply_to_message
         chat_id = m.chat.id
@@ -65,21 +65,21 @@ async def play(c: Client, m: Message):
         a = await c.get_chat_member(chat_id, aing.id)
         if a.status != "administrator":
             await m.reply_text(
-                f"💡 لاستخدامي ، أحتاج إلى أن أكون ** مسؤول ** مع الأذونات ** التالية**:\n\n» ❌ __حذف الرسائل__\n» ❌__إضافة مستخدمين__\n» ❌ __إدارة دردشة الفيديو__\n\nيتم تحديث البيانات ** تلقائيًا بعد ترقيتك ****"
+                f"💡 لاستخدامي ، أحتاج إلى أن أكون ** مسؤول ** مع الأذونات ** التالية**:\n\n» ✗ __حذف الرسائل__\n» ✗__إضافة مستخدمين__\n» ✗ __إدارة دردشة الفيديو__\n\nيتم تحديث البيانات ** تلقائيًا بعد ترقيتك ****"
             )
             return
         if not a.can_manage_voice_chats:
             await m.reply_text(
-                "الإذن المطلوب مفقود:" + "\n\n» ❌ __إدارة دردشة الفيديو__"
+                "الإذن المطلوب مفقود:" + "\n\n» ✗ __إدارة دردشة الفيديو__"
             )
             return
         if not a.can_delete_messages:
             await m.reply_text(
-                "الإذن المطلوب مفقود:" + "\n\n» ❌ __حذف الرسائل__"
+                "الإذن المطلوب مفقود:" + "\n\n» ✗ __حذف الرسائل__"
             )
             return
         if not a.can_invite_users:
-            await m.reply_text("الإذن المطلوب مفقود:" + "\n\n» ❌__إضافة مستخدمين__")
+            await m.reply_text("الإذن المطلوب مفقود:" + "\n\n» ✗__إضافة مستخدمين__")
             return
         try:
             ubot = (await user.get_me()).id
@@ -94,7 +94,7 @@ async def play(c: Client, m: Message):
                 try:
                     await user.join_chat(m.chat.username)
                 except Exception as e:
-                    await m.reply_text(f"❌ **فشل في الانضمام**\n\n**السبب**: `{e}`")
+                    await m.reply_text(f"✗ **فشل في الانضمام**\n\n**السبب**: `{e}`")
                     return
             else:
                 try:
@@ -110,7 +110,7 @@ async def play(c: Client, m: Message):
                     pass
                 except Exception as e:
                     return await m.reply_text(
-                        f"❌ **فشل في الانضمام**\n\n**السبب**: `{e}`"
+                        f"✗ **فشل في الانضمام**\n\n**السبب**: `{e}`"
                     )
         if replied:
             if replied.audio or replied.voice:
@@ -137,7 +137,7 @@ async def play(c: Client, m: Message):
                     )
                 else:
                     try:
-                        await suhu.edit("᥀︙ ** الانضمام إلى vc...**")
+                        await suhu.edit("᥀︙ ** جاࢪ الانضمام الى الاتصال**")
                         await call_py.join_group_call(
                             chat_id,
                             AudioPiped(
@@ -155,7 +155,7 @@ async def play(c: Client, m: Message):
                         )
                     except Exception as e:
                         await suhu.delete()
-                        await m.reply_text(f"🚫 حدث خطأ تئكد من المكالمه مفتوحه  اولآ:\n\n» {e}")
+                        await m.reply_text(f"✗ حدث خطأ تئكد من المكالمه مفتوحه  اولآ:\n\n» {e}")
             else:
                 if len(m.command) < 2:
                     await m.reply(
@@ -166,7 +166,7 @@ async def play(c: Client, m: Message):
                     query = m.text.split(None, 1)[1]
                     search = ytsearch(query)
                     if search == 0:
-                        await suhu.edit("❌ **لم يتم العثور على نتائج.**")
+                        await suhu.edit("✗ **لم يتم العثور على نتائج.**")
                     else:
                         songname = search[0]
                         url = search[1]
@@ -175,7 +175,7 @@ async def play(c: Client, m: Message):
                         format = "bestaudio[ext=m4a]"
                         veez, ytlink = await ytdl(format, url)
                         if veez == 0:
-                            await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
+                            await suhu.edit(f"✗ yt-dl issues detected\n\n» `{ytlink}`")
                         else:
                             if chat_id in QUEUE:
                                 pos = add_to_queue(
@@ -208,7 +208,7 @@ async def play(c: Client, m: Message):
                                     )
                                 except Exception as ep:
                                     await suhu.delete()
-                                    await m.reply_text(f"🚫 حدث خطأ تئكد من المكالمه مفتوحه  اولآ: `{ep}`")
+                                    await m.reply_text(f"✗ حدث خطأ تئكد من المكالمه مفتوحه  اولآ: `{ep}`")
 
         else:
             if len(m.command) < 2:
@@ -229,7 +229,7 @@ async def play(c: Client, m: Message):
                     format = "bestaudio[ext=m4a]"
                     veez, ytlink = await ytdl(format, url)
                     if veez == 0:
-                        await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
+                        await suhu.edit(f"✗ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
                             pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
