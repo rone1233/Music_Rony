@@ -1,5 +1,5 @@
 {
-    "name": "سورس علوش ميوزك",
+    "name": "سورس ميوزك",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
     "logo": "https://telegra.ph/file/cbefab50d720cd7cb5ca8.jpg",
     "keywords": [
@@ -8,9 +8,9 @@
         "video stream",
         "pyrogram"
     ],
-    "website": "https://t.me/kafren1",
+    "website": "https://t.me/GGG66",
     "repository": "https://github.com/alfaransy/Sources",
-    "success_url": "https://t.me/kafren1",
+    "success_url": "https://t.me/vrrrrvr",
     "env": {
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
@@ -47,12 +47,12 @@
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "eithonsupport"
+            "value": "T9T99T"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "EITHON1"
+            "value": "vrrrrvr"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
