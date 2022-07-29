@@ -8,9 +8,9 @@
         "video stream",
         "pyrogram"
     ],
-    "website": "https://t.me/GGG66",
+    "website": "https://t.me/bm0_c",
     "repository": "https://github.com/alfaransy/Sources",
-    "success_url": "https://t.me/vrrrrvr",
+    "success_url": "https://t.me/lllio5",
     "env": {
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
@@ -47,12 +47,12 @@
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "T9T99T"
+            "value": "RONE0E"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "vrrrrvr"
+            "value": "lllio5"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
