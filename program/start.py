@@ -48,7 +48,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["////start", f"////start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["/start", f"/start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -77,12 +77,12 @@ async def start_(client: Client, message: Message):
                         "‹ قناة المطور ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة البوت ›", url=f"https://t.me/rvrrrrv"
+                        "‹ قناة البوت ›", url=f"https://t.me/RONEE1N"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url="https://t.me/vrrrrvr"
+                        "ســـــتوريات و اغــــاني𖠇", url="https://t.me/lllio5"
                     )
                 ],
             ]
@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/lllio5"),
                 InlineKeyboardButton(
-                    "‹ مطور السوࢪس ›", url=f"https://t.me/GGG66"
+                    "‹ مطور السوࢪس ›", url=f"https://t.me/bm0_c"
                 ),
             ]
         ]
@@ -129,15 +129,15 @@ async def src(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/lllio5"),
                 InlineKeyboardButton(
-                    "‹ مطور السورس ›", url=f"https://t.me/GGG66"
+                    "‹ مطور السورس ›", url=f"https://t.me/bm0_c"
                 ),
             ]
         ]
     )
 
-    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس اެيفان\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
+    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس ࢪوني\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
