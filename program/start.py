@@ -137,7 +137,7 @@ async def src(client: Client, message: Message):
         ]
     )
 
-    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس ࢪوني\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
+    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس ࢪوني\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع القناة الرسمية: @lllio5** ᥀"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
